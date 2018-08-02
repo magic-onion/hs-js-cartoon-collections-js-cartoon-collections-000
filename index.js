@@ -1,6 +1,6 @@
 function dwarfRollCall(dwarves) {
   var dwarfString = "";
-  for (var i = 0; i < dwarves.length; i++) {
+  for (var i = (dwarves.length/2); i < dwarves.length; i++) {
     dwarves[i] = i + 1 + ". " + dwarves[i];
   }
   dwarfString = dwarves.join(" ") + " ";
@@ -38,7 +38,7 @@ function findTheCheese (foods) {
   }
 }
 */
-//the above code passes the tests, but does not work if the Array does not have cheddar as the first matching element
+//the above code passes the tests, but does not do what the prompt describes
 function findTheCheese(foods) {
   var cheeses = ['cheddar', 'gouda', 'camembert'];
   var noCheese = 'no cheese!';
@@ -48,7 +48,15 @@ function findTheCheese(foods) {
       return foods[i];
     }
   }
-		if (cheeses.includes(foods[i]) === false) {
-    return noCheese;
+  return noCheese;
+}
+
+function wordsWithB(words) {
+  bWords =[];
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].includes("b")) {
+      bWords.push(words[i]);
     }
+  }
+  return bWords;
 }
